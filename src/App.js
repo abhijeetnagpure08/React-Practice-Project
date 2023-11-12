@@ -2,7 +2,7 @@
 import './App.css';
 import Todo from './components/Todo/Todo';
 import Page from './components/Pagination/Page'
-
+import Timer from './components/Timer/Timer';
 function App() {
   return (
     <div id='main'>
