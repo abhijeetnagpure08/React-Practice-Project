@@ -3,6 +3,7 @@ import './App.css';
 import Todo from './components/Todo/Todo';
 import Page from './components/Pagination/Page'
 import Timer from './components/Timer/Timer';
+import TodoApp from './components/Todo-using-useReducer/TodoApp';
 function App() {
   return (
     <div id='main'>
