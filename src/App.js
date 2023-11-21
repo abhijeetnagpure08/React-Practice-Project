@@ -4,6 +4,8 @@ import Todo from './components/Todo/Todo';
 import Page from './components/Pagination/Page'
 import Timer from './components/Timer/Timer';
 import TodoApp from './components/Todo-using-useReducer/TodoApp';
+import AllRoutes from './components/Routing/components/AllRoutes';
+import Navbar from './components/Routing/components/Navbar';
 function App() {
   return (
     <div id='main'>
