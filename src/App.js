@@ -6,12 +6,14 @@ import Timer from './components/Timer/Timer';
 import TodoApp from './components/Todo-using-useReducer/TodoApp';
 import AllRoutes from './components/Routing/components/AllRoutes';
 import Navbar from './components/Routing/components/Navbar';
+import Calci from './components/BmiCalculator/Calci';
 function App() {
   return (
     <div id='main'>
       <h1>Basic Todo list</h1>
       {/* <Todo /> */}
-      <Page />
+      {/* <Page /> */}
+      <Calci />
     </div>
   );
 }
