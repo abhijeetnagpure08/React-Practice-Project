@@ -7,6 +7,7 @@ import TodoApp from './components/Todo-using-useReducer/TodoApp';
 import AllRoutes from './components/Routing/components/AllRoutes';
 import Navbar from './components/Routing/components/Navbar';
 import Calci from './components/BmiCalculator/Calci';
+import { Form } from './components/useReducer-example/Form';
 function App() {
   return (
     <div id='main'>
