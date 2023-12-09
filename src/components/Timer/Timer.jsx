@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import "./Timer.css";
 
 function formatValue(value) {
   return value <= 9 ? `0${value}` : value;
@@ -15,8 +16,14 @@ const formatToString = (timeInSecs) => {
 
 export default Timer = () => {
   let val = 3600;
-  const [count, setCount] = useState(val);
+  const [value, setValue] = useState(0);
+  const [count, setCount] = useState(value);
   let intervalId = useRef(null);
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    setCount(e.target.value);
+  };
 
   useEffect(() => {
     const cleanupFunc = () => {
@@ -47,17 +54,25 @@ export default Timer = () => {
   }
   function resetTimer() {
     stopTimer();
-    setCount(val);
+    setCount(0);
   }
   return (
     <div>
       <h1>Timer</h1>
-      <h1>{formatToString(count)}</h1>
-      <button onClick={startTimer}>Start Timer</button>
-      <button onClick={stopTimer}>Stop Timer</button>
-      <button onClick={resetTimer}>Reset Timer</button>
-      <br />
-      <br />
+      <div className="container">
+        <div className="first-box">
+          <p>Enter Seconds</p>
+          <input id="inp" type="text" onChange={handleChange} />
+        </div>
+        <div className="second-box">
+          <div id="time">
+            <h1>{formatToString(count)}</h1>
+          </div>
+          <button onClick={startTimer}>Start Timer</button>
+          <button onClick={stopTimer}>Stop Timer</button>
+          <button onClick={resetTimer}>Reset Timer</button>
+        </div>
+      </div>
     </div>
   );
 };
