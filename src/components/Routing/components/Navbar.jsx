@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContextProvider";
+import "./Navbar.css";
 const links = [
   { path: "/", title: "HOME" },
   { path: "/about", title: "ABOUT" },
@@ -11,7 +12,7 @@ const links = [
 function Navbar() {
   const { isAuth } = useContext(AuthContext);
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
+    <div className="cont">
       {links?.map((links) => (
         <NavLink
           style={({ isActive }) => {
@@ -28,7 +29,7 @@ function Navbar() {
         //   {links.title}
         // </Link>
       ))}
-      <p style={{ marginTop: "0px" }}>
+      <p className="user">
         IS USER AUTHENTICATED : {isAuth ? "YES" : "NO"}
       </p>
     </div>
