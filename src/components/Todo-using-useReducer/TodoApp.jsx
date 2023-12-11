@@ -28,6 +28,8 @@ const todoReducerFn = (state, { type, payload }) => {
 
 const TodoApp = () => {
   const [todos, dispatch] = useReducer(todoReducerFn, []);
+  //Normal method using useState
+
   // const [todos, setTodos] = useState([]);
   // const handleAdd = (value) => {
   //   setTodos ([...todos, { id: Date.now(), value, isCompleted: false }]);
