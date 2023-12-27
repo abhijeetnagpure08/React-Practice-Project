@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-
+import "./otp.css"
 const Pin = forwardRef(({ maxChar, forOnChange, forBackSpace }, ref) => {
   const handleKeyUp = (e) => {
     // console.log(e);
